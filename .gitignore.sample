@@ -1,0 +1,17 @@
+assets/
+protected/runtime/
+protected/config/main.php
+protected/data/*.db
+vendor/*
+composer.lock
+
+nbproject/
+.buildpath
+.project
+.settings
+.metadata
+tmp/
+local.properties
+.launch
+
+/protected/vendors/

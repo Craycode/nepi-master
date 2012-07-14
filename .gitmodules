@@ -1,0 +1,6 @@
+[submodule "protected/extensions/Twig"]
+	path = protected/extensions/Twig
+	url = https://github.com/fabpot/Twig.git
+[submodule "protected/vendors/Twig"]
+	path = protected/vendors/Twig
+	url = https://github.com/fabpot/Twig.git

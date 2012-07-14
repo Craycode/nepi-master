@@ -1,0 +1,7 @@
+application_name = Nepi
+application_gii_password = your_password
+application_allowAutoLogin = true
+application_db_host = 127.0.0.1
+application_db_dbname = your_db_name
+application_db_username = your_db_username
+application_db_password = your_db_password

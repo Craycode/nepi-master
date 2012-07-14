@@ -1,0 +1,10 @@
+/protected/vendors/
+/assets/*
+/protected/runtime/*
+/nbproject
+.composer.lock
+.htaccess
+/protected/config/main.php
+*.*~
+vendor
+build.properties

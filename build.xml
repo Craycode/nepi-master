@@ -1,0 +1,56 @@
+
+<project name="Nepi" basedir=".">
+	<description>
+		Nepi project build file
+	</description>
+	
+	<target name="init">
+		<property name="env" value="dev"/>
+		<property name="properties.file" value="build.properties"/>
+		
+		<available file="local.properties" property="properties.file" value="local.properties"/>
+		<property file="${properties.file}" />
+
+		<property name="dir_config" value="protected/config"/>
+	
+		<filter token="application_name" value="${application_name}"/>
+		<filter token="application_gii_password" value="${application_gii_password}"/>
+		<filter token="application_allowAutoLogin" value="${application_allowAutoLogin}"/>
+		<filter token="application_db_host" value="${application_db_host}"/>
+		<filter token="application_db_dbname" value="${application_db_dbname}"/>
+		<filter token="application_db_username" value="${application_db_username}"/>
+		<filter token="application_db_password" value="${application_db_password}"/>
+	
+	</target>
+	
+	<target name="check_build_properties" depends="init">
+		<available file="build.properties" property="build.properties.present"/>
+	</target>
+	
+	<target name="break_not_exist" depends="check_build_properties" unless="build.properties.present">
+		<echo message="build.properties not available! Create it from build.properties.sample file!"/>
+		<break/>
+	</target>
+
+
+	<target name="permissions" depends="break_not_exist" if="build.properties.present">
+		<echo message="Performing permission changes.."/>
+		<chmod dir="assets" perm="777"/>
+		<chmod dir="protected/runtime" perm="777"/>
+	</target>
+	
+	<target name="remove_redundant" depends="permissions">
+		<delete file="${dir_config}/main.php"/>
+	</target>
+	
+	<target name="filtering" depends="remove_redundant">
+		<echo message="Creating configuration files.."/>
+		<copy file=".htaccess.sample" tofile=".htaccess" />
+		<copy file="${dir_config}/main.php.sample" tofile="${dir_config}/main.php" filtering="true"/>
+	</target>
+	
+	<target name="build" depends="filtering,permissions,remove_redundant,filtering">
+		
+	</target>
+	
+</project>

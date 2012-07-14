@@ -1,9 +1,11 @@
 {
-    "hash": "ec6122536d2fd287fbfed1e23ebb8601",
+    "hash": "eff6e22d6ba0629e8023285a187f6b99",
     "packages": [
         {
-            "package": "twig/twig",
-            "version": "v1.9.0"
+            "package": "yiisoft/yii",
+            "version": "master",
+            "source-reference": "master",
+            "commit-date": "1342349061"
         }
     ],
     "packages-dev": null,
@@ -11,7 +13,7 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ]
+    "stability-flags": {
+        "yiisoft/yii": 20
+    }
 }

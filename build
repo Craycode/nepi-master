@@ -1,0 +1,11 @@
+#!/bin/bash
+clear
+echo ">>>> Starting build. <<<<"
+php composer.phar update
+php composer.phar install
+echo "<<<<<<<<<<<<<<<<<<<<<<<<<"
+if [ $1 ]
+	then sudo ant build -f build.$1.xml
+	else sudo ant build
+fi
+echo ">>>>>>>>> Done. <<<<<<<<<"

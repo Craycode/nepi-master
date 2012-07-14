@@ -1,5 +1,24 @@
 {
-    "require": {
-        "twig/twig": "1.*"
-    }
+	"name": "glutzic/nepi",
+	"repositories": [
+	{
+		"type": "package",
+		"package": {
+			"name": "yiisoft/yii",
+			"version": "master",
+			"dist": {
+				"url": "https://github.com/yiisoft/yii/zipball/master",
+				"type": "zip"
+			},
+			"source": {
+				"url": "git://github.com/yiisoft/yii.git",
+				"type": "git",
+				"reference": "master"
+			}
+		}
+	}
+	],
+	"require": {
+		"yiisoft/yii": "dev-master"
+	}
 }

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "yiisoft/yii",
+        "version": "master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git://github.com/yiisoft/yii.git",
+            "reference": "master"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/yiisoft/yii/zipball/master",
+            "reference": null,
+            "shasum": null
+        },
+        "type": "library",
+        "installation-source": "source"
+    }
+]

@@ -1,0 +1,10 @@
+
+<project name="Nepi" basedir=".">
+	<description>
+		Nepi project build file
+	</description>
+
+	<chmod dir="assets" perm="777"/>
+	<chmod dir="protected/runtime" perm="777"/>
+	
+</project>
